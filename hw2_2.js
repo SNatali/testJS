@@ -10,11 +10,9 @@ function isSomeTrue(source, filterFn){
   for(var i = 0; i < source.length; i++) {
     if(filterFn(source[i])) {
       return true;
-    } else {
-      return false;
     }
   }
-  return isSomeTrue(source, filterFn);
+  return false;
 }
 function isNumber(val) {
   return typeof val === 'number';
