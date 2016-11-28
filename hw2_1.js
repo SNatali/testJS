@@ -15,13 +15,11 @@ function isAllTrue(source, filterFn){
 		}
 
 	for(var i = 0; i < source.length; i++) {
-		if(filterFn(source[i]) != true) {
+		if(!filterFn(source[i]) ) {
 			return false;
-		} else {
-			return true;
 		}
 	}
-	return isAllTrue(source, filterFn);
+	return true;
 }
 function isNumber(val) {
 	return typeof val === 'number';
@@ -37,5 +35,5 @@ var result4 = isAllTrue(emptyArray, isNumber);
 	console.log(e.message);
 }
 	console.log(result);
-	console.log(result2);//не возвращает false ????;
+	console.log(result2);
 	console.log(result3);
